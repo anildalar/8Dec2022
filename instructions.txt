@@ -1,0 +1,33 @@
+Javascript Data Type
+
+1. String
+2. Number
+3. Object
+4. Array
+
+What is a variable ?
+Variable are like container to store some data.
+Variable can store one data at a time.
+
+var students = [];
+
+{} = JS Object
+[] = JS Array
+
+Array is special variable which can store more than one data at a time.
+
+
+var arrayName = [element1,element2,element3,..,elementn];
+or
+var arrayName = [item1,item2,item3,..,itemn];
+
+var students = ['rakesh','anjali','saloni','payal'];
+
+var students = [{name:'rakesh',surname:"kharol"},{},{},{}]
+
+
+<tag attribute="value">Content Area</tag>
+
+<h1 data-myheading="myheading">Hello Chandu</h1>
+
+
