@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Array</title>
+        <style>
+            /*
+                selector{
+                    property:Value;
+                }
+            */
+            h1[data-myheading="myheading"]{
+                background-color:red;
+                padding:20px;
+                color:#fff;
+                border-radius: 10px;
+            }
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1 data-myheading="myheading"></h1>
+        <p id="news1p"></p>
+
+        <h1 class="anil"></h1>
+        <p class="dollor"></p>
+
+        <hr />
+
+        <h1 data-n3h1="n3h1"></h1>
+        <p data-n3p1="n3p1"></p>
+
+        <hr />
+
+        <script src="./js/script.js"></script>
+        <script>
+            //
+            let students = ['Anil','Bhanu','Chandu']; //JS Array
+
+
+            // arrayName[indexNumber]
+
+            // Array index Number always start with 0
+            console.log('Hello '+students[1]); // Concatination operator
+
+            // 2.
+            //alert('Hello "'+students[0]+'"'); // Concatination operator
+
+
+            //3. innerHTML
+
+            let h1 = document.querySelector('[data-myheading]');
+            //I want to follow DRY principle 
+            h1.innerHTML = 'Hello '+ students[2]; // Concatination operator
+
+
+            const $allNews = [
+                {
+                    //1. Property:Value
+                    n1h1:'Himachal CM leads in stronghold of Seraj, has been winning it since 1998',
+                    n1p1:'Himachal Pradesh assembly election results 2022: In the last assembly polls, the BJP had won 44 seats.'
+                    
+                    //2. 
+                },
+                {
+                    //1. Property:Value
+                    n2h2:"'Why didn't he come in to bat earlier?': Gavaskar after Rohit Sharma smashes 51* with dislocated thumb but India lose",
+                    n2p2:'Sunil Gavaskar feels that if Rohit Sharma had decided he would bat, the India captain could have come in a little early, which could have made things a bit easier for India.'
+                },
+                {
+                    n3h1:'Afghan Taliban carry out first public execution since takeover',
+                    n3p1:'Last month, Taliban supreme leader Hibatullah Akhundzada ordered judges to fully enforce aspects of Islamic law that include public executions, stonings and floggings, and the amputation of limbs from thieves.'
+                }
+            ];//Array containing objects i.e Array of object
+
+
+
+            document.querySelector('h1.anil').innerHTML = $allNews[1].n2h2;//Technique 1
+            document.querySelector('p.dollor').innerHTML = $allNews[1]['n2p2'];//    //Technique 2
+
+
+
+            let n3express1 = 'n3h1';
+            document.querySelector('h1[data-n3h1]').innerHTML = $allNews[2][n3express1];   //Technique 3
+            document.querySelector('p[data-n3p1="n3p1"]').innerHTML = $allNews[2].n3p1; //Technique 1
+        </script>
+    </body>
+</html>
